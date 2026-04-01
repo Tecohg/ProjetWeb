@@ -25,3 +25,10 @@ j2: une boite se debloque contenant une carte et des pions, ainsi qu'une note av
 Salle d'attente pour deux joueur 
 liste de serveurs (creer ou rejoindre rajouter la possibilité d'accepter ou non)
 identifiant de partie(soit par sauvegarde (BDD) ou sinon temporaire en session)
+
+
+References et Sources aide:
+Faiz Dev, vidéo : "Comment créer une sesion en php" (pour les sessions)
+AK DEV, vidéo : "Comment créer un formulaire d'inscription (puis de connexion) en PHP & MYSQL" (pour le login ainsi que l'insertion des données dans une BDD)
+AK DEV, vidéo : 
+"Comment créer une base de données SQL avec phpMyAdmin"

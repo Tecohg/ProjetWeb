@@ -1,5 +1,5 @@
 body {
-    background-color: darkblue;
+    background-color: gray;
 }
 
 h1, h2, h3 {
@@ -17,15 +17,13 @@ button {
     cursor: pointer;
 }
 
-.message {
-    margin-top: 20px;
-    font-weight: bold;
-    font-size: 18px;
+input{
+    margin-bottom:10px;
 }
 
 .discussion {
-    border: 3px solid darkgray;
-    background-color: #E8DCB8;
+    border: 3px solid #544b03;
+    background-color: #d4cd98;
     padding: 15px;
     width: fit-content;
     border-radius: 10px;

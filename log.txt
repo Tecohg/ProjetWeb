@@ -9,3 +9,9 @@ A la fin, le duo (ou uniquement le détective) vote entre les deux détectives e
 
 Version future à plusieurs, si on continue à travailler sur le projet.
 Dans le groupe, il y a un traitre (ou non ?) et le traitre veux faire accuser quelqu'un d'autre pour partir innocenté. Alors que le détéctive veut trouver le coupable.
+
+
+
+
+programmation:
+pour coder la session il faut verifier le nombre de joueurs quand un utilisateur rejoins, pour eviter des problemes
