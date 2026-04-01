@@ -24,7 +24,8 @@ button {
 }
 
 .discussion {
-    border: 3px solid darkblue;
+    border: 3px solid darkgray;
+    background-color: #E8DCB8;
     padding: 15px;
     width: fit-content;
     border-radius: 10px;
