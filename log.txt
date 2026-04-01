@@ -15,3 +15,7 @@ Dans le groupe, il y a un traitre (ou non ?) et le traitre veux faire accuser qu
 
 programmation:
 pour coder la session il faut verifier le nombre de joueurs quand un utilisateur rejoins, pour eviter des problemes
+on refais le login, puis on essaye de configurer la session pour que sur plusieures pages differentes notre nom s'affiche
+
+1 une page login et 1 page register
+apres connexion on puisse acceder a une page tierce exemple.php qui elle, sans utiliser de get, recupere la session et affiche le pseudo
