@@ -1,0 +1,11 @@
+1: Prototype, tester et faire fonctionner un login avec un chat
+2: faire fonctionner un puzzle basique
+3: trouver comment faire changer des images (exemple: une boite qui s'ouvre)
+
+MECHANIQUE TRES INTERESSANTE: (à la Sherlock Holmes VS Moriarty)
+Déjà, version à deux joueurs.
+Le duo de détectives veux avancer pour trouver le coupable. Cependant, un traitre se cache peut-être dans le duo (20% de chance), essayant de mettre le groupe sur une fausse piste pour êtr einnocenté.
+A la fin, le duo (ou uniquement le détective) vote entre les deux détectives et quelques suspects pour identifier le coupable. S'ils ont raisons, ils gagnent.
+
+Version future à plusieurs, si on continue à travailler sur le projet.
+Dans le groupe, il y a un traitre (ou non ?) et le traitre veux faire accuser quelqu'un d'autre pour partir innocenté. Alors que le détéctive veut trouver le coupable.
