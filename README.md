@@ -12,5 +12,3 @@ Escape game a deux joueurs, les joueurs sont dans deux salles differentes, et do
 
 
 histoire sur rewind
-
-test2
