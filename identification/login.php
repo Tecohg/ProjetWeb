@@ -5,7 +5,7 @@ $msg = $_GET['msg']?? '';
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport", initial-scale=1.0">
+    <meta name="viewport"  initial-scale="width=device-width, initial-scale=1.0">
     <title>Login</title>
 </head>
 <body>

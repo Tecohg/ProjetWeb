@@ -1,8 +1,12 @@
 <?php
-#variable de session
+#a rajouter sur chaques pages:
 session_start();
-$_SESSIONS["utilisateur"] = "Arnaud";
-echo $_SESSIONS["utilisateur"];
+if (empty($_SESSION['login'])) {
+    header('Location: identification/login.php');
+    exit;
+}
+
+$login = $_SESSION['login'];
 ?>
 
 <!DOCTYPE html>
@@ -14,7 +18,8 @@ echo $_SESSIONS["utilisateur"];
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>TEST</h1>
     <p class="discussion">test</p>
+    <h1>Bonjour, <?= htmlspecialchars($login) ?> !</h1>
+    <a href=""identification/logout.php">Se deconnecter</a>
 </body>
 </html>
