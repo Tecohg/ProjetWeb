@@ -9,8 +9,8 @@ $msg = $_GET['msg']?? '';
     <title>Login</title>
 </head>
 <body>
-    <form method="post" action="access.php">
-        <?php if ($msg) echo "<p style='color:red'>$msg</p>"; ?>
+    <form method="post" action="access.php"> #formulaire qui envois a access.php les inputs
+        <?php if ($msg) echo "<p style='color:red'>$msg</p>"; ?> #indication: inscription reussis... etc...
         <input name="login" placeholder"Login">
         <input name="mdp" type="password" placeholder="mot de passe">
         <button type="submit">Connexion></button>

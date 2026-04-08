@@ -2,7 +2,7 @@
 #a rajouter sur chaques pages:
 session_start();
 if (empty($_SESSION['login'])) {
-    header('Location: identification/login.php');
+    header('Location: identification/login.php'); #logique: si pas de login, alors on renvois a la page de login
     exit;
 }
 
@@ -19,7 +19,7 @@ $login = $_SESSION['login'];
 </head>
 <body>
     <p class="discussion">test</p>
-    <h1>Bonjour, <?= htmlspecialchars($login) ?> !</h1>
-    <a href=""identification/logout.php">Se deconnecter</a>
+    <h1>Bonjour, <?= htmlspecialchars($login) ?> !</h1> #permet d'éviter qu'un utilisateur rentre des commandes dans son login qui executerais ce qu'il veux
+    <a href="identification/logout.php">Se deconnecter</a>
 </body>
 </html>
