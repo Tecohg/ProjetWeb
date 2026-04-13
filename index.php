@@ -20,6 +20,7 @@ $login = $_SESSION['login'];
 <body>
     <h1>Bonjour, <?= htmlspecialchars($login) ?> !</h1> <!--permet d'éviter qu'un utilisateur rentre des commandes dans son login qui executerais ce qu'il veux-->
     <p class="discussion">test</p>
+    <a href="chat/chat.php">chattest</a>
     <a href="identification/logout.php">Se deconnecter</a>
 </body>
 </html>

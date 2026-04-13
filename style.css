@@ -1,30 +1,31 @@
-body {
-    background-color: #5F9EA0;
+body { /* Modifie le corps de la page */
+    background-color: #5F9EA0; /* change la couleur de fond */
 }
 
-h1, h2, h3 {
-    text-decoration: underline;
+h1, h2, h3 { /* Modifie les titres */
+    text-decoration: underline; /* les sousligne */
 }
 
-a {
-    display: relative;
+button { /* Modifie les bouttons */
+    padding: 10px 20px; /* rajoute un espace de 10px sur les hauteurs, et 20 px sur les côtés */
+    font-size: 16px; /* taille du texte */
+    margin-top: 15px; /* marge supérieur */
+    cursor: pointer; /* le curseur est une main quand on passe au dessus */
 }
 
-button {
-    padding: 10px 20px;
-    font-size: 16px;
-    margin-top: 15px;
-    cursor: pointer;
+a { /* L'ancre */
+    cursor: pointer; /* le curseur est une main quand on passe au dessus */
+    display: relative; /* par rapport à la position*/
 }
 
-input{
-    margin-bottom:10px;
+input{ /* Zone de texte */
+    margin-left: none; /* marge gauche */
 }
 
-.discussion {
-    border: 3px solid #544b03;
-    background-color: #d4cd98;
-    padding: 15px;
-    width: fit-content;
-    border-radius: 10px;
+.discussion { /* Classe d'objet "discussion" */
+    border: 3px solid #544b03; /* bord */
+    background-color: #d4cd98; /* couleur de fond */
+    padding: 15px; /* l'espace sur (tout) les côtés */
+    width: fit-content; /* largeur */
+    border-radius: 10px; /* arrondit les coins */
 }

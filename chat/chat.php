@@ -1,15 +1,15 @@
 <?php
 session_start();
 if (empty($_SESSION["login"])) {
-    header('Location: identification/login.php');
+    header('Location: ../../identification/login.php');
     exit;
 }
 
 $me = $_SESSION['login'];
-$users=getUsers(__DIR__ .'/identification/users.csv',$me);
+$users=getUsers(__DIR__ .'/../identification/users.csv',$me);
 $other = $_GET['other'] ?? $users[0] ?? null;
 
-#on recupere la liste d'utilisateurs
+/* on recupere la liste d'utilisateurs */
 function getUsers($file,$user1) {
     $users= [];
     foreach(file($file, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES) as $line) {
@@ -24,7 +24,7 @@ function getUsers($file,$user1) {
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <title>Chat</title>
@@ -35,9 +35,9 @@ function getUsers($file,$user1) {
         <h3>Utilisateurs</h3>
         <?php
             foreach ($users as $user) {
-                $classe = $user === $other ? 'actif' : ''; #utilisateur est il actif ?
+                $classe = $user === $other ? 'actif' : ''; /* utilisateur est il actif ? --> */
                 $nom    = htmlspecialchars($user);
-                echo "<a href='chat.php?avec=$user' class='$classe'>$nom</a>";
+                echo "<a href='chat.php?other=$user' class='$classe'>$nom</a>";
             }
         ?>
     <hr>
@@ -57,11 +57,11 @@ function getUsers($file,$user1) {
         <?php endif; ?>
     </div>
 
-    <script> #passer les variables php en javascript
+    <script> /* passer les variables php en javascript */
         const me  = "<?= $me ?>";
         const other = "<?= $other ?>";
     </script>
-    #charger le fichier javascript
+    <!--charger le fichier javascript -->
     <script src="chat.js"></script>
 </body>
 </html>

@@ -10,16 +10,17 @@ $me= $_SESSION['login'];
 $other = $_GET['other'];
 $file = __DIR__ . '/messages.csv';
 $messages=[];
+$depuis = (int)($_GET['depuis'] ?? 0);
 
 if (file_exists($file)) {
     $lignes = file($file, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
 
     foreach ($lignes as $i => $line) {
         if ($i < $depuis) continue;
-        
-        [$exp, $dest, $msg, $date] = explode(',', $line, 4);
 
-        if (($exp === $moi && $dest === $avec) || ($exp === $avec && $dest === $moi)) {
+        [$exp, $dest, $msg, $date] = explode(';', $line, 4);
+
+        if (($exp === $me && $dest === $other) || ($exp === $other && $dest === $me)) {
             $messages[] = ['exp' => $exp, 'msg' => $msg, 'date' => $date, 'index' => $i];
         }
     }

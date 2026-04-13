@@ -1,30 +1,92 @@
-body {
-    background-color: #5F9EA0;
+body { 
+    display: flex; 
+    height: 100vh; 
+    margin: 0; 
+    font-family: 
+    sans-serif; 
+    background-color: #5F9EA0; /* change la couleur de fond */
 }
 
-h1, h2, h3 {
-    text-decoration: underline;
+h1, h2, h3 { /* Modifie les titres */
+    text-decoration: underline; /* les sousligne */
 }
 
-a {
-    display: relative;
+.discussion { /* Classe d'objet "discussion" */
+    border: 3px solid #544b03; /* bord */
+    background-color: #d4cd98; /* couleur de fond */
+    padding: 15px; /* l'espace sur (tout) les côtés */
+    width: fit-content; /* largeur */
+    border-radius: 10px; /* arrondit les coins */
+}
+ 
+.users { 
+    width: 150px; 
+    border-right: 1px solid #ccc; 
+    padding: 0.5rem; display: flex; 
+    flex-direction: column; 
+    gap: 0.25rem; 
 }
 
-button {
-    padding: 10px 20px;
-    font-size: 16px;
-    margin-top: 15px;
-    cursor: pointer;
+.users a { 
+    display: block; 
+    text-decoration: none; 
+    color: inherit; 
+    padding: 0.2rem; 
 }
 
-input{
-    margin-bottom:10px;
+.users a.actif { 
+    font-weight: 
+    bold; 
+}
+ 
+.chat { 
+    flex: 1; 
+    display: flex; 
+    flex-direction: column; 
 }
 
-.discussion {
-    border: 3px solid #544b03;
-    background-color: #d4cd98;
-    padding: 15px;
-    width: fit-content;
-    border-radius: 10px;
+.messages { 
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto; 
+    padding: 0.5rem; 
+}
+ 
+.me    { 
+    text-align: right;
+    display: inline-block;
+    align-self: flex-end;
+    background-color: white;
+    border-radius: 1rem;
+    border: solid black 0.1rem; 
+    padding: 0.25rem;
+    margin: 0.5rem;
+}
+
+.other { 
+    text-align: left;
+    display: inline-block;
+    align-self: flex-start; 
+    background-color: white;
+    border-radius: 1rem;
+    border: solid black 0.1rem; 
+    padding: 0.25rem;
+    margin: 0.5rem;
+}
+
+
+.date { 
+    font-size: 11px; 
+    color: #999; 
+}
+ 
+.formulaire { 
+    display: flex; 
+    gap: 0.5rem; 
+    padding: 0.5rem; 
+    border-top: 1px solid #ccc; 
+}
+
+.formulaire input { 
+    flex: 1; 
 }
