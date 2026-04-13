@@ -43,20 +43,18 @@ function getUsers($file,$user1) {
     <hr>
     <a href="../identification/logout.php">Déconnexion</a>
     </div>
-    
     <div class="chat">
         <?php if ($other): ?>
-            <h3> conversation avec <?=htmlspecialchars($other) ?></h3>
+            <h3> Conversation avec <?=htmlspecialchars($other) ?></h3>
             <div class="messages" id="messages"></div>
             <div class="formulaire">
-                <input type="text" id="input" placeholder="votre message..." autocomplete="off">
+                <input type="text" id="input" placeholder="Votre message..." autocomplete="off">
                 <button id="btnEnvoyer">Envoyer</button>
             </div>
         <?php else: ?>
             <p>Aucun autre utilisateur trouvé.</p>
         <?php endif; ?>
     </div>
-
     <script> /* passer les variables php en javascript */
         const me  = "<?= $me ?>";
         const other = "<?= $other ?>";

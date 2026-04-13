@@ -5,18 +5,11 @@ body {
     font-family: 
     sans-serif; 
     background-color: #5F9EA0; /* change la couleur de fond */
+    font-size:1rem;
 }
 
 h1, h2, h3 { /* Modifie les titres */
     text-decoration: underline; /* les sousligne */
-}
-
-.discussion { /* Classe d'objet "discussion" */
-    border: 3px solid #544b03; /* bord */
-    background-color: #d4cd98; /* couleur de fond */
-    padding: 15px; /* l'espace sur (tout) les côtés */
-    width: fit-content; /* largeur */
-    border-radius: 10px; /* arrondit les coins */
 }
  
 .users { 
@@ -56,9 +49,9 @@ h1, h2, h3 { /* Modifie les titres */
     text-align: right;
     display: inline-block;
     align-self: flex-end;
-    background-color: white;
+    background-color: #d4cd98;
     border-radius: 1rem;
-    border: solid black 0.1rem; 
+    border: 3px solid black;
     padding: 0.25rem;
     margin: 0.5rem;
 }
@@ -67,9 +60,9 @@ h1, h2, h3 { /* Modifie les titres */
     text-align: left;
     display: inline-block;
     align-self: flex-start; 
-    background-color: white;
+    background-color: #d4cd98;
     border-radius: 1rem;
-    border: solid black 0.1rem; 
+    border: 3px solid black;
     padding: 0.25rem;
     margin: 0.5rem;
 }
@@ -88,5 +81,8 @@ h1, h2, h3 { /* Modifie les titres */
 }
 
 .formulaire input { 
-    flex: 1; 
+    flex: 1;
+    size:5rem;
+    height:2rem;
+    border-radius: 10px; /* arrondit les coins */
 }
