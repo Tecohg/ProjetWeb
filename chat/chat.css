@@ -11,7 +11,11 @@ body {
 h1, h2, h3 { /* Modifie les titres */
     text-decoration: underline; /* les sousligne */
 }
- 
+
+h3 {
+    text-align:center;
+}
+
 .users { 
     width: 150px; 
     border-right: 1px solid #ccc; 
@@ -86,3 +90,4 @@ h1, h2, h3 { /* Modifie les titres */
     height:2rem;
     border-radius: 10px; /* arrondit les coins */
 }
+
