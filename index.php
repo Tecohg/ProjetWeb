@@ -18,8 +18,8 @@ $login = $_SESSION['login'];
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <h1>Bonjour, <?= htmlspecialchars($login) ?> !</h1> <!--permet d'éviter qu'un utilisateur rentre des commandes dans son login qui executerais ce qu'il veux-->
     <p class="discussion">test</p>
-    <h1>Bonjour, <?= htmlspecialchars($login) ?> !</h1> #permet d'éviter qu'un utilisateur rentre des commandes dans son login qui executerais ce qu'il veux
     <a href="identification/logout.php">Se deconnecter</a>
 </body>
 </html>
