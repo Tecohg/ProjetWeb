@@ -19,3 +19,5 @@ on refais le login, puis on essaye de configurer la session pour que sur plusieu
 
 1 une page login et 1 page register
 apres connexion on puisse acceder a une page tierce exemple.php qui elle, sans utiliser de get, recupere la session et affiche le pseudo
+
+https://www.youtube.com/watch?v=8ApMuSdumwE AJAX (ce qu'on a utiliser pour le chat)
