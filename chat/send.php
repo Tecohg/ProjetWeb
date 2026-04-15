@@ -12,7 +12,7 @@ $msg = $_POST['message'] ?? '';
 $date =date('j-m-Y h:i:s');
 
 if ($dest && $msg) {
-    file_put_contents(__DIR__ . '/messages.csv', "$me;$dest;$msg;$date" . PHP_EOL, FILE_APPEND); //; au lieu de , car , dans la date posais probleme
+    file_put_contents(__DIR__ . '/messages.csv', "$me;$dest;$msg;$date" . PHP_EOL, FILE_APPEND); // " ; " au lieu de " , " car " , " dans la date posais probleme
     echo json_encode(['ok' => true]);
 }
 else {

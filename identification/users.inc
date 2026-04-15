@@ -2,11 +2,13 @@
 $file = __DIR__ . '/users.csv';
 
 
+//on parcours le fichier file contenant les utilisateurs,motdepasse puis on compare les variables a verifier si elles sont egales et si c'est le cas alors on renvois true
+
 /*verifie qu'un login existe ou non */
 function exist($login) {
     global $file;
-    foreach (file($file, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES) as $line) {
-        # Ignore new lines enleve \n, et empty lines enleve les lignes vides.
+    foreach (file($file, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES) as $line) { /* file($file) permet de creer une liste contenant toutes les lignes d'un fichier, dans notre cas: */
+        /* Ignore new lines enleve \n, et empty lines enleve les lignes vides. */
         [$l, $m] = explode(',', $line); 
         if ($l === $login) return true;
     }
@@ -35,6 +37,6 @@ function loginOk($login, $mdp) {
 function addUser($login, $mdp) {
     global $file;
     $hash = password_hash($mdp, PASSWORD_BCRYPT);
-    file_put_contents($file, "$login,$hash" . PHP_EOL, FILE_APPEND); /* rajout de login,mdp\n (mais pas vraiment /n, plutot EOL)*/
+    file_put_contents($file, "$login,$hash" . PHP_EOL, FILE_APPEND); /* rajoute login,mdp\n (mais pas vraiment /n, plutot EOL)*/
 }
 ?>
