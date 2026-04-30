@@ -5,12 +5,11 @@ if ($_POST) {
     $login = $_POST['login'];
     $mdp = $_POST['mdp'];
     $conf = $_POST['conf'];
-    $email= $_POST['email'];
     if ($mdp !== $conf) {
         $msg = "Mots de passe differents";
     } elseif (exist($login)) {
         $msg ="login deja pris";
-    } elseif (!$login || !$mdp || !$email) {
+    } elseif (!$login || !$mdp) {
         $msg = "champs manquant";
     } else {
         addUser($login, $mdp);
@@ -27,7 +26,6 @@ if ($msg) echo "<p style='color:red'>$msg</p>";
     <input name="login" placeholder="Login*" required>
     <input name="mdp" type="password" placeholder="Mot de passe*" required>
     <input name="conf" type="password" placeholder="Confirmation*" required>
-    <input name="email" type="email" placeholder="Email*" required>
     <button type="submit">S'inscrire</button>
 </form>
 <a href="login.php">se connecter</a>

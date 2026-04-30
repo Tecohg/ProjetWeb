@@ -35,6 +35,7 @@ function envoyer() {
             chargerMessages(); 
         }
     });
+    /*Ici*/ 
 }
 
 document.getElementById('btnEnvoyer').addEventListener('click',envoyer);

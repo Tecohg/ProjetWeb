@@ -9,7 +9,7 @@ $me = $_SESSION['login'];
 
 
 <!DOCTYPE html>
-<html lang="fr"
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <title>Jeu</title>
@@ -26,7 +26,7 @@ $me = $_SESSION['login'];
                 <div class="case" data-index="<?= $i ?>"></div>
             <?php endfor; ?>
         </div>    
-
+        <button id="btnReset" style="display:none">Restart</button>
         <!-- On envois $me au js puis on charge le script -->
         <script>
             const me = "<?= $me ?>"

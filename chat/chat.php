@@ -27,22 +27,32 @@ function getUsers($file,$user1) {
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Chat</title>
+    <title>Chat jeu</title>
     <link rel="stylesheet" href="chat.css">
 </head>
 <body>
+
     <div class="users">
         <h3>Utilisateurs</h3>
-        <?php
-            foreach ($users as $user) {
-                $classe = $user === $other ? 'actif' : ''; /* utilisateur est il actif ? --> */
-                $nom    = htmlspecialchars($user);
-                echo "<a href='chat.php?other=$user' class='$classe'>$nom</a>";
-            }
-        ?>
-    <hr>
-    <a href="../identification/logout.php">Déconnexion</a>
+        <hr>
+        <div class="liste-users">
+            <?php
+                foreach ($users as $user) {
+                    $classe = $user === $other ? 'actif' : ''; /* utilisateur est il actif ? --> */
+                    $nom    = htmlspecialchars($user);
+                    echo "<a href='chat.php?other=$user' class='$classe'>$nom</a>";
+                }
+            ?>
+        </div>
+
+        <div class="bas-de-colonne">
+            <hr>
+            <a href="../index.php">Page d'acceuil</a>
+            <a href="../jeux/morpion/morpion.php">Retour au jeu</a>
+            <a href="../identification/logout.php">Déconnexion</a>
+        </div>
     </div>
+
     <div class="chat">
         <?php if ($other): ?>
             <h3> Conversation avec <?=htmlspecialchars($other) ?></h3>
