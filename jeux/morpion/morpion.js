@@ -54,7 +54,7 @@ function etat(){
 }
 
 function jouer(index) {
-    fetch('play.php', {
+    fetch('jeu.php', {
         method:'POST',
         headers:{'Content-Type': 'application/x-www-form-urlencoded'},
         body:`case=${index}`})
