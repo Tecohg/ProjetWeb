@@ -44,6 +44,7 @@ h3 {
 
 .bas-de-colonne {
     flex-shrink: 0; /*Empêche le bloc de rétrécir.*/
+    font-weight: bold; 
 }
 
 .users > hr {
@@ -106,3 +107,15 @@ h3 {
     border-radius: 10px; /* arrondit les coins */
 }
 
+.infos-messages {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 0.4rem;
+    position: fixed; /* Positionné par rapport à la fenêtre*/
+    padding: 0.4rem 0.6rem;
+    font-size: 0.75rem;
+    pointer-events: none; /* La tooltip n'intercepte pas les clics */
+    display: none;
+    z-index: 999; /* Au dessus de tout */
+    white-space: nowrap; /* Empêche le retour à la ligne */
+}

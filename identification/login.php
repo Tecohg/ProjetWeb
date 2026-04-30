@@ -18,7 +18,7 @@ $msg = $_GET['msg']?? ''; /* Recupere la variable msg du hheader envoyé par les
         <input name="login" placeholder="Login">
         <input name="mdp" type="password" placeholder="mot de passe"><br>
         <?php if ($msg) echo "<p style='color:red'>$msg</p>"; ?> <!-- indication: inscription reussis... etc... -->
-        <button type="submit">Connexion></button>
+        <button type="submit">Connexion</button>
     </form>
 
     <a href="register.php">Creer un compte</a> 
