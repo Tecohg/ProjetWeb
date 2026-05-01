@@ -77,6 +77,22 @@ document.getElementById('input').addEventListener('keydown', e => {
 if (e.key === 'Enter') envoyer();
 });
 
+document.querySelectorAll('.btn-morpion').forEach(btn => {
+    btn.addEventListener('click', () => {
+        const adversaire = btn.dataset.adversaire;
+        fetch('../jeux/morpion/creerPartie.php', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+            body: `adversaire=${adversaire}`
+        })
+        .then(r => r.json())
+        .then(data => {
+            if (data.ok) window.location.href = '../jeux/morpion/jeu.php';
+            else alert(data.error);
+        });
+    });
+});
+
 
 chargerMessages();
 setInterval(chargerMessages,2000);

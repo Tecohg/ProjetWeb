@@ -79,8 +79,10 @@ $stats_messages = compter_messages();
                     $envoyes  = $stats_messages[$user]['envoyes'] ?? 0;
                     $recus    = $stats_messages[$user]['recus'] ?? 0;
                     $total    = $envoyes + $recus;
-                    echo "<a href='chat.php?other=$nom' class='$classe' data-envoyes='$envoyes' 
-                    data-recus='$recus' data-total='$total'>$nom</a>";
+                    echo "<div class='ligne-content'>";
+                    echo "<a href='chat.php?other=$nom' class='$classe' data-envoyes='$envoyes' data-recus='$recus' data-total='$total'>$nom</a>";
+                    echo "<button class='btn-morpion' data-adversaire='$nom'>MORPION</button>";
+                    echo "</div>";
                 }
             ?>
         </div>

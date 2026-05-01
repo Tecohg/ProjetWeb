@@ -1,5 +1,7 @@
 {
     "W0oooooooh": [
+        "raph2",
+        "raph",
         "Boop",
         "Pioulf",
         "Raph"
@@ -9,5 +11,13 @@
     ],
     "Boop": [
         "W0oooooooh"
+    ],
+    "raph": [
+        "raph2",
+        "W0oooooooh"
+    ],
+    "raph2": [
+        "W0oooooooh",
+        "raph"
     ]
 }
