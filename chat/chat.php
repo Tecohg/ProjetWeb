@@ -48,7 +48,7 @@ function getUsers($file,$user1) {
         <div class="bas-de-colonne">
             <hr>
             <a href="../index.php">Page d'acceuil</a>
-            <a href="../jeux/morpion/morpion.php">Retour au jeu</a>
+            <a href="../jeux/morpion/jeu.php">Retour au jeu</a>
             <a href="../identification/logout.php">Déconnexion</a>
         </div>
     </div>
