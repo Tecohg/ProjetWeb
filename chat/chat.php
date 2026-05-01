@@ -53,7 +53,7 @@ $other = $_GET['other'] ?? $users[0] ?? null; /*La personne à qui on parle*/
 $contacts = charger_contacts(); /*Le tableau avec tout les contacts*/
 $mes_contacts = $contacts[$me] ?? []; /*Mes contacts*/
 /*Diff enlève ceux de mes contacts, values enlèves les trous.*/
-$stats_messages = compter_messages($me);
+$stats_messages = compter_messages();
 
 ?>
 
