@@ -1,4 +1,5 @@
 <?php
+//jeu.php
 session_start();
 if (empty($_SESSION['login'])) {
     header('Location: ../../identification/login.php');

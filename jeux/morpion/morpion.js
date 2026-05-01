@@ -1,3 +1,4 @@
+//morpion.js
 let monSymbole=null; //symbole du joueur X ou O
 
 function afficherTableau(tableau,tour,gagnant,j1,j2) {
@@ -54,7 +55,7 @@ function etat(){
 }
 
 function jouer(index) {
-    fetch('jeu.php', {
+    fetch('morpion.php', {
         method:'POST',
         headers:{'Content-Type': 'application/x-www-form-urlencoded'},
         body:`case=${index}`})

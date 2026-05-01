@@ -1,4 +1,5 @@
 <?php
+//morpion.php
 session_start();
 if (empty($_SESSION['login'])) { 
         http_response_code(403);
