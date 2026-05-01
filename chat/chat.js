@@ -27,7 +27,7 @@ function envoyer() {
         method: 'POST',
         headers: {'Content-Type': 'application/x-www-form-urlencoded'},
         body: `destinataire=${other}&message=${encodeURIComponent(msg)}`
-    }) /* ; erreur cette ligne, peut être ; juste avant la parenthèse */
+    })
     .then(r => r.json())
     .then(data => {
         if (data.ok) {
@@ -35,12 +35,46 @@ function envoyer() {
             chargerMessages(); 
         }
     });
-    /*Ici*/ 
 }
 
+function RechercherUtilisateurs() {
+    const recherche = document.getElementById('recherche').value.toLowerCase();
+    document.querySelectorAll('#liste-utilisateurs a').forEach(function(lien) {
+        const nom = lien.textContent.toLowerCase();
+        lien.style.display = nom.includes(recherche) ? 'block' : 'none';
+    });
+}
+
+function AfficherInfos(e) {
+    const envoyes = this.dataset.envoyes;
+    const recus = this.dataset.recus;
+    const total = this.dataset.total;
+    if (envoyes === undefined) return;
+    infos.innerHTML = `Stats.<br>Envoyés : ${envoyes}<br>Reçus : ${recus}<br>Total : ${total}`;
+    infos.style.display = 'block';
+    infos.style.left = (e.clientX + 10) + 'px';
+    infos.style.top  = (e.clientY + 10) + 'px';
+}
+
+function DeplacerInfos(e) {
+    infos.style.left = (e.clientX + 10) + 'px';
+    infos.style.top  = (e.clientY + 10) + 'px';
+}
+
+function CacherInfos() {
+    infos.style.display = 'none';
+}
+
+const infos = document.getElementById('infos-messages');
+
 document.getElementById('btnEnvoyer').addEventListener('click',envoyer);
-document.getElementById('input').addEventListener('keydown',e => {
-    if (e.key === 'Enter') envoyer();
+document.getElementById('recherche').addEventListener('input', RechercherUtilisateurs);document.querySelectorAll('.liste-users a').forEach(function(lien) {
+    lien.addEventListener('mouseenter', AfficherInfos);
+    lien.addEventListener('mousemove',  DeplacerInfos);
+    lien.addEventListener('mouseleave', CacherInfos);
+});
+document.getElementById('input').addEventListener('keydown', e => {
+if (e.key === 'Enter') envoyer();
 });
 
 
