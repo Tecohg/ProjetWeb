@@ -41,7 +41,7 @@ function afficherTableau(tableau,tour,gagnant,j1,j2) {
 
 
 function etat(){
-    fetch('etatMorpion.php')
+    fetch(`etatMorpion.php?other=${other}`)
     .then(r => r.json())
     .then(data => {
         if (data.ok) {
@@ -58,7 +58,7 @@ function jouer(index) {
     fetch('morpion.php', {
         method:'POST',
         headers:{'Content-Type': 'application/x-www-form-urlencoded'},
-        body:`case=${index}`})
+        body:`case=${index}&other=${other}`})
         .then(r => r.json())
         .then (data =>  {
             if (data.ok) {
@@ -71,11 +71,14 @@ function jouer(index) {
 }
 //redemarre la partie
 document.getElementById('btnReset').addEventListener('click', () => {
-    fetch('resetMorpion.php', { method: 'POST' })
-        .then(r => r.json())
-        .then(() => etat());
+    fetch('resetMorpion.php', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+        body: `other=${other}`
+    })
+    .then(r => r.json())
+    .then(() => etat());
 });
-
 
 //les cases sont clickable
 document.querySelectorAll('.case').forEach(element => {

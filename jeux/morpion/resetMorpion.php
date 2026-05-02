@@ -6,13 +6,27 @@ if (empty($_SESSION['login'])) {
     exit;
 }
 
-$file= __DIR__ . '/etatMorpion.csv';
-if (!file_exists($file)) {
-    echo json_encode(['ok' => false, 'error' => 'Pas de partie']);
-    exit;
-}
-[$j1,$j2]=explode(',',trim(file_get_contents($file)));
+$me    = $_SESSION['login'];
+$other = $_POST['other'] ?? '';
 
-file_put_contents($file,"$j1,$j2,---------,$j1");
+
+$file = __DIR__ . '/etatMorpion.json';
+$parties = file_exists($file) ? json_decode(file_get_contents($file), true) : [];
+
+$joueurs = [$me, $other];
+sort($joueurs);
+$cle = $joueurs[0] . '_' . $joueurs[1];
+
+
+if (!isset($parties[$cle])) {
+    echo json_encode(['ok' => false, 'error' => 'Pas de partie']); exit;
+}
+
+
+$parties[$cle]['tableau'] = '---------';
+$parties[$cle]['tour'] = $parties[$cle]['j1'];
+
+
+file_put_contents($file, json_encode($parties, JSON_PRETTY_PRINT));
 echo json_encode(['ok' => true]);
 ?>

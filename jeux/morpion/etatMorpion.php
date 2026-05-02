@@ -6,14 +6,22 @@ if (empty($_SESSION["login"])) {
     exit;
 }
 
-$file=__DIR__. '/etatMorpion.csv';
-if (!file_exists($file)) {
+$me = $_SESSION['login'];
+$other = $_GET['other'] ?? '';
+
+$file= __DIR__ . '/etatMorpion.json';
+$parties = file_exists($file) ? json_decode(file_get_contents($file), true) : [];
+
+$joueurs = [$me, $other];
+sort($joueurs);
+$cle = $joueurs[0] . '_' . $joueurs[1];
+
+
+if (!isset($parties[$cle])) {
     echo json_encode(['ok' => false, 'error' => 'Pas de partie en cours']);
-    exit;    
+    exit;
 }
-
-[$j1,$j2,$tableau,$tour]=explode(',',trim(file_get_contents($file)));
-
+$partie=$parties[$cle];
 function symboleGagnant($tableau) {
     $combinaisons = [[0,1,2], [3,4,5], [6,7,8], [0,3,6], [1,4,7], [2,5,8], [0,4,8], [2,4,6]];
     
@@ -28,13 +36,15 @@ function symboleGagnant($tableau) {
     return null;
 }
 
-$gagnant = symboleGagnant($tableau);
+
 echo json_encode([
     'ok' => true,
-    'j1' => $j1,
-    'j2' => $j2,
-    'tableau' => $tableau,
-    'tour' => $tour,
-    'gagnant' => $gagnant
+    'j1' => $partie['j1'],
+    'j2' => $partie['j2'],
+    'tableau' => $partie['tableau'],
+    'tour' => $partie['tour'],
+    'gagnant' => symboleGagnant($partie['tableau'])
 ]);
+
+exit;
 ?>

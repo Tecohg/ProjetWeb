@@ -7,17 +7,25 @@ if (empty($_SESSION['login'])) {
 }
 
 $me   = $_SESSION['login'];
-$case = (int)($_POST['case'] ?? -1); 
-$file = __DIR__ . '/etatMorpion.csv';      
-if (!file_exists($file)) { 
-    echo json_encode(['ok' => false, 'error' => 'Pas de partie']);
-    exit; 
+$other = $_POST['other'] ?? '';
+$case = (int)($_POST['case'] ?? -1);  
+
+$file = __DIR__ . '/etatMorpion.json';
+$parties = file_exists($file) ? json_decode(file_get_contents($file), true) : [];
+
+$joueurs = [$me, $other];
+sort($joueurs);
+$cle = $joueurs[0] . '_' . $joueurs[1];
+
+
+if (!isset($parties[$cle])) {
+    echo json_encode(['ok' => false, 'error' => 'Pas de partie']); exit;
 }
 
-[$j1, $j2, $tableau, $tour] = explode(',', trim(file_get_contents($file)));
 
+$partie = &$parties[$cle]; 
 
-if ($tour !== $me) { 
+if ($partie['tour'] !== $me) { 
     echo json_encode(['ok' => false, 'error' => 'Pas ton tour']); 
     exit; 
 }
@@ -29,19 +37,16 @@ if ($case < 0 || $case > 8) {
 }
 
 
-if ($tableau[$case] !== '-') { 
+if ($partie['tableau'][$case] !== '-') { 
     echo json_encode(['ok' => false, 'error' => 'Case prise']); 
     exit; 
 }
 
 
-$symbol = ($me === $j1) ? 'X' : 'O';
+$symbol = ($me === $partie['j1']) ? 'X' : 'O';
+$partie['tableau'][$case] = $symbol;
+$partie['tour'] = ($partie['tour'] === $partie['j1']) ? $partie['j2'] : $partie['j1'];
 
 
-$tableau[$case] = $symbol;
-
-$prochain = ($tour === $j1) ? $j2 : $j1;
-
-file_put_contents($file, "$j1,$j2,$tableau,$prochain");
-
-echo json_encode(['ok' => true, 'tableau' => $tableau, 'tour' => $prochain]);
+file_put_contents($file, json_encode($parties, JSON_PRETTY_PRINT));
+echo json_encode(['ok' => true, 'tableau' => $partie['tableau'], 'tour' => $partie['tour']]);

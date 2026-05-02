@@ -6,6 +6,8 @@ if (empty($_SESSION['login'])) {
     exit;
 }
 $me = $_SESSION['login'];
+$other = $_GET['other'] ?? '';
+if (!$other) { header('Location: ../../chat/chat.php'); exit; }
 ?>
 
 
@@ -31,6 +33,7 @@ $me = $_SESSION['login'];
         <!-- On envois $me au js puis on charge le script -->
         <script>
             const me = "<?= $me ?>"
+            const other = "<?=$other?>";
         </script>
         <script src="morpion.js"></script>
     </body>

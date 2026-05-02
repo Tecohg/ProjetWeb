@@ -15,7 +15,16 @@ if (!exist($adversaire) || $adversaire === $me) {
     exit;
 }
 //initialisation d'1 partie
-$file = __DIR__ . '/etatMorpion.csv';
-file_put_contents($file, "$me,$adversaire,---------,$me");
+$file = __DIR__ . '/etatMorpion.json';
+$parties= file_exists($file) ? json_decode(file_get_contents($file),true) : [];
+$joueurs = [$me,$adversaire];
+sort($joueurs);
+$cle = $joueurs[0] . '_' . $joueurs[1];
+
+if (!isset($parties[$cle])) {
+    $parties[$cle] = ['j1' => $me, 'j2' => $adversaire, 'tableau' => '---------', 'tour' => $me];
+   file_put_contents($file, json_encode($parties, JSON_PRETTY_PRINT));
+}
 echo json_encode(['ok' => true]);
+
 ?>
