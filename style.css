@@ -1,31 +1,138 @@
-body { /* Modifie le corps de la page */
-    background-color: #5F9EA0; /* change la couleur de fond */
+/*style.css variables */
+:root {
+    --bg: #e4dabe;
+    --text: #141414;
+    --accent: #141414;
+    --muted: #888383;
+    --border: #d7c4c4;
+    --nav-bg: #171616;
+    --nav-text: #ffffff;
+}
+ 
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+ 
+.form-container {
+    max-width: 400px;
+    margin: 6rem auto;
+    padding: 2rem;
 }
 
-h1, h2, h3 { /* Modifie les titres */
-    text-decoration: underline; /* les sousligne */
+body {
+    font-family: sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    background-image: url("https://get.pxhere.com/photo/water-sky-building-chateau-palace-france-castle-facade-medieval-architecture-estate-chambord-moat-manor-house-royal-castle-tours-stately-home-classical-architecture-historic-site-water-castle-national-trust-for-places-of-historic-interest-or-natural-beauty-1374990.jpg");
+    background-size:cover;
 }
-
-button { /* Modifie les bouttons */
-    padding: 10px 20px; /* rajoute un espace de 10px sur les hauteurs, et 20 px sur les côtés */
-    font-size: 16px; /* taille du texte */
-    margin-top: 15px; /* marge supérieur */
-    cursor: pointer; /* le curseur est une main quand on passe au dessus */
+ 
+/* navbar */
+nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    height: 56px;
+    background: var(--nav-bg);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+    z-index: 100;
 }
-
-a { /* L'ancre */
-    cursor: pointer; /* le curseur est une main quand on passe au dessus */
-    display: relative; /* par rapport à la position*/
+ 
+.nav-logo {
+    color: var(--nav-text);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
 }
-
-input{ /* Zone de texte */
-    margin-left: none; /* marge gauche */
+ 
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 0.25rem;
 }
-
-.discussion { /* Classe d'objet "discussion" */
-    border: 3px solid #544b03; /* bord */
-    background-color: #d4cd98; /* couleur de fond */
-    padding: 15px; /* l'espace sur (tout) les côtés */
-    width: fit-content; /* largeur */
-    border-radius: 10px; /* arrondit les coins */
+ 
+.nav-links > li {
+    position: relative;
+}
+ 
+.nav-links > li > a,
+.nav-links > li > button {
+    color: var(--nav-text);
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 0.85rem;
+    padding: 0.4rem 0.8rem;
+    text-decoration: none;
+    display: block;
+    opacity: 0.8;
+}
+ 
+.nav-links > li > a:hover,
+.nav-links > li > button:hover {
+    opacity: 1;
+}
+ 
+/* Dropdown */
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: var(--nav-bg);
+    min-width: 160px;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+ 
+.nav-links > li:hover .dropdown {
+    display: block;
+}
+ 
+.dropdown a {
+    display: block;
+    padding: 0.6rem 1rem;
+    color: var(--nav-text);
+    text-decoration: none;
+    font-size: 0.85rem;
+    opacity: 0.8;
+}
+ 
+.dropdown a:hover {
+    opacity: 1;
+    background: rgba(255,255,255,0.08);
+}
+ 
+.nav-user {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: var(--nav-text);
+    font-size: 0.85rem;
+    opacity: 0.8;
+}
+ 
+.nav-user a {
+    color: var(--nav-text);
+    text-decoration: none;
+}
+ 
+.nav-user a:hover { opacity: 1; }
+ 
+/* main */
+main {
+    padding: 5rem 2rem 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+ 
+main h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+ 
+main p {
+    color: var(--muted);
+    margin-bottom: 2.5rem;
 }

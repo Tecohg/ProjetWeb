@@ -14,12 +14,14 @@ $login = $_SESSION['login'];
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ProjetWeb</title>
+    <title>LePetitChatelier</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Bonjour, <?= htmlspecialchars($login) ?> !</h1> <!--permet d'éviter qu'un utilisateur rentre des commandes dans son login qui executerais ce qu'il veux-->
-    <a href="chat/chat.php">chattest</a>
-    <a href="identification/logout.php">Se deconnecter</a>
+    <!-- menu navigation -->
+     <?php $depth = 0; include 'nav.php'; ?>
+    <main>
+        <h1>Bonjour, <?= htmlspecialchars($login) ?> bienvenue sur LePetitChatelier.com !</h1> <!--permet d'éviter qu'un utilisateur rentre des commandes dans son login qui executerais ce qu'il veux-->
+    </main>
 </body>
 </html>

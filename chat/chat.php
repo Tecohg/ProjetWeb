@@ -63,75 +63,71 @@ $stats_messages = compter_messages();
 <head>
     <meta charset="UTF-8">
     <title>Chat jeu</title>
+    <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="chat.css">
 </head>
 
 <body>
-    <div class="users">
-        <h3>Contacts</h3>
-        <hr>
-
-        <div class="liste-users">
-            <?php
-                foreach ($mes_contacts as $user){
-                    $classe = $user === $other ? 'actif' : '';
-                    $nom    = htmlspecialchars($user);
-                    $envoyes  = $stats_messages[$user]['envoyes'] ?? 0;
-                    $recus    = $stats_messages[$user]['recus'] ?? 0;
-                    $total    = $envoyes + $recus;
-                    echo "<div class='ligne-content'>";
-                    echo "<a href='chat.php?other=$nom' class='$classe' data-envoyes='$envoyes' data-recus='$recus' data-total='$total'>$nom</a>";
-                    echo "<button class='btn-morpion' data-adversaire='$nom'>MORPION</button>";
-                    echo "</div>";
-                }
-            ?>
-        </div>
-
-        <hr>
-        <h3>Utilisateurs</h3>
-        <input type="text" id="recherche" placeholder="Rechercher..." autocomplete="off">
-        <hr>
-
-        <div class="liste-users" id="liste-utilisateurs">
-            <?php
-                foreach ($users as $user) {
-                    $classe = $user === $other ? 'actif' : ''; /* utilisateur est il actif ? --> */
-                    $nom    = htmlspecialchars($user);
-                    echo "<a href='chat.php?other=$user' class='$classe'>$nom</a>";
-                }
-            ?>
-        </div>
-
-        <div class="bas-de-colonne">
+    <?php $depth = 1; include '../nav.php'; ?>
+    <div class="chat-layout">
+        <div class="users">
+            <h3>Contacts</h3>
             <hr>
-            <a href="../index.php">Page d'acceuil</a>
-            <a href="../jeux/morpion/jeu.php">Retour au jeu</a>
-            <a href="../identification/logout.php">Déconnexion</a>
+
+            <div class="liste-users">
+                <?php
+                    foreach ($mes_contacts as $user){
+                        $classe = $user === $other ? 'actif' : '';
+                        $nom    = htmlspecialchars($user);
+                        $envoyes  = $stats_messages[$user]['envoyes'] ?? 0;
+                        $recus    = $stats_messages[$user]['recus'] ?? 0;
+                        $total    = $envoyes + $recus;
+                        echo "<div class='ligne-contact'>";
+                        echo "<a href='chat.php?other=$nom' class='$classe' data-envoyes='$envoyes' data-recus='$recus' data-total='$total'>$nom</a>";
+                        echo "<button class='btn-morpion' data-adversaire='$nom'> <img src='morpion.png' /> </button>";
+                        echo "</div>";
+                    }
+                ?>
+            </div>
+            
+            <hr>
+            <h3>Utilisateurs</h3>
+            <input type="text" id="recherche" placeholder="Rechercher..." autocomplete="off">
+            <hr>
+
+            <div class="liste-users" id="liste-utilisateurs">
+                <?php
+                    foreach ($users as $user) {
+                        $classe = $user === $other ? 'actif' : ''; /* utilisateur est il actif ? --> */
+                        $nom    = htmlspecialchars($user);
+                        echo "<a href='chat.php?other=$user' class='$classe'>$nom</a>";
+                    }
+                ?>
+            </div>
         </div>
 
+        <div class="chat">
+            <?php if ($other): ?>
+                <h3> Conversation avec <?=htmlspecialchars($other) ?></h3>
+                <div class="messages" id="messages"></div>
+
+                <div class="formulaire">
+                    <input type="text" id="input" placeholder="Votre message..." autocomplete="off">
+                    <button id="btnEnvoyer">Envoyer</button>
+                </div>
+
+            <?php else: ?>
+                <p>Aucun autre utilisateur trouvé.</p>
+            <?php endif; ?>
+        </div>
     </div>
 
-    <div class="chat">
-        <?php if ($other): ?>
-            <h3> Conversation avec <?=htmlspecialchars($other) ?></h3>
-            <div class="messages" id="messages"></div>
-
-            <div class="formulaire">
-                <input type="text" id="input" placeholder="Votre message..." autocomplete="off">
-                <button id="btnEnvoyer">Envoyer</button>
-            </div>
-
-        <?php else: ?>
-            <p>Aucun autre utilisateur trouvé.</p>
-        <?php endif; ?>
-    </div>
-
-    <div class="infos-messages" id="infos-messages"></div>
-    <script> /* passer les variables php en javascript */
-        const me  = "<?= $me ?>";
-        const other = "<?= $other ?>";
-    </script>
-    <!--charger le fichier javascript -->
-    <script src="chat.js"></script>
+        <div class="infos-messages" id="infos-messages"></div>
+        <script> /* passer les variables php en javascript */
+            const me  = "<?= $me ?>";
+            const other = "<?= $other ?>";
+        </script>
+        <!--charger le fichier javascript -->
+        <script src="chat.js"></script>
 </body>
 </html>
