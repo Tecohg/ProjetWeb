@@ -40,5 +40,6 @@ if (!$other) { header('Location: ../../chat/chat.php'); exit; }
             </script>
             <script src="morpion.js"></script>
         </div>
+        <a id="retour" href="../../chat/chat.php?other=<?= htmlspecialchars($other) ?>">Retour au chat</a>
     </body>
 </html>

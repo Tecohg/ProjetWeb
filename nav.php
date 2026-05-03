@@ -10,9 +10,7 @@ $root = str_repeat('../', $depth ?? 0);
         <li>
             <button>Découvrir ▾</button>
             <div class="dropdown">
-                <a href="#">Histoire des châteaux</a>
-                <a href="#">Carte interactive</a>
-                <a href="#">Galerie</a>
+                <a href="<?= $root ?>histoireChateaux.php">Histoire des châteaux</a>
             </div>
         </li>
         <li>
@@ -22,7 +20,6 @@ $root = str_repeat('../', $depth ?? 0);
                 <a href="<?= $root ?>forum/forum.php">Forum</a>
             </div>
         </li>
-        <li><a href="<?= $root ?>jeux/morpion/jeu.php">Jeux</a></li>
     </ul>
 
     <div class="nav-user">

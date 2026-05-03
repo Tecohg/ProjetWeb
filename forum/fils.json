@@ -4,13 +4,27 @@
         "description": "Salut est-ce que quelqu'un aurait une liste des chateaux visitable a nice ?",
         "auteur": "raph",
         "date": "03-05-2026 13:02",
-        "nb_messages": 2
+        "nb_messages": 3
     },
     "69f74875d01e9": {
         "titre": "test",
         "description": "ok oue ocool",
         "auteur": "raph2",
         "date": "03-05-2026 13:07",
-        "nb_messages": 2
+        "nb_messages": 3
+    },
+    "69f7a03588522": {
+        "titre": "Ch\u00e2teaux de la Loire \u00e0 venir",
+        "description": "J'ai demand\u00e9 de l'aide \u00e0 quelqu'un, je rajoute d\u00e8s demain les ch\u00e2teaux de la Loire",
+        "auteur": "W0oooooooh",
+        "date": "03-05-2026 19:21",
+        "nb_messages": 3
+    },
+    "69f7a5eb324e2": {
+        "titre": "test",
+        "description": "testttt",
+        "auteur": "raph",
+        "date": "03-05-2026 19:45",
+        "nb_messages": 0
     }
 }

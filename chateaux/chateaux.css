@@ -1,0 +1,44 @@
+body {
+    background-image: url("https://images.pexels.com/photos/449751/pexels-photo-449751.jpeg");
+    color:var(--text-histoire);
+}
+
+main {
+    background-color: rgb(255 255 255 / 0.75);
+}
+
+main img {
+    max-width: 700px;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 1rem 0;
+    border-radius: 4px;
+}
+
+main h2 {
+    font-size: 0.95rem;
+    font-weight: normal;
+    color:var(--text-histoire);
+    margin-bottom: 1rem;
+    max-width: 700px;
+}
+
+main h3 {
+    font-size: 0.8rem;
+    font-weight: normal;
+    color:var(--text-histoire);
+    margin-bottom: 1rem;
+    max-width: 700px;
+}
+
+main h5 {
+    font-size: 0.75rem;
+    font-weight: normal;
+    color:var(--text-histoire);
+    margin-top: 0.3rem;
+}
+
+main h5 a {
+    color:var(--links);
+}

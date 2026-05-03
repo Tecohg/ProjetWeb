@@ -4,10 +4,12 @@
     --text: #141414;
     --accent: #141414;
     --muted: #888383;
-    --border: #d7c4c4;
+    --border: #2b2828;
     --nav-bg: #171616;
     --nav-text: #ffffff;
-}
+    --test-histoire: #190000 ;
+    --links: #0d6000;
+} /* color: var(--nouvelle-couleur); */
  
 
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
@@ -20,7 +22,7 @@
 
 body {
     font-family: sans-serif;
-    background: var(--bg);
+    background: var(--nav-bg);
     color: var(--text);
     min-height: 100vh;
     background-image: url("https://get.pxhere.com/photo/water-sky-building-chateau-palace-france-castle-facade-medieval-architecture-estate-chambord-moat-manor-house-royal-castle-tours-stately-home-classical-architecture-historic-site-water-castle-national-trust-for-places-of-historic-interest-or-natural-beauty-1374990.jpg");
@@ -135,4 +137,55 @@ main h1 {
 main p {
     color: var(--muted);
     margin-bottom: 2.5rem;
+}
+
+
+.cards {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 1.5rem;
+}
+
+.card {
+    border: 2px solid var(--border);
+    width: 200px;
+    text-decoration: none;
+    color: var(--text);
+    overflow: hidden;
+    border-radius: 4px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    background: var(--bg);
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+    border-color: var(--accent);
+}
+
+.card-img {
+    width: 100%;
+    height: 130px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s;
+}
+
+.card:hover .card-img {
+    transform: scale(1.08);
+}
+
+.card-body {
+    padding: 0.8rem;
+}
+
+.card-label {
+    font-weight: bold;
+    margin-bottom: 0.3rem;
+}
+
+.card-desc {
+    font-size: 0.82rem;
+    color: var(--muted);
 }

@@ -1,15 +1,6 @@
 /* forum.css */
-/*style.css variables */
-:root {
-    --bg: #e4dabe;
-    --text: #141414;
-    --accent: #141414;
-    --muted: #888383;
-    --border: #d7c4c4;
-    --nav-bg: #171616;
-    --nav-text: #ffffff;
-}
- 
+
+
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
@@ -162,4 +153,13 @@ body {
     resize: vertical;
     background: var(--bg);
     color: var(--text);
+}
+
+.btnSuppr button {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    color: var(--text);
+    padding: 0.4rem 0.8rem;
+    border-radius: 4px;
+    margin-top: 0.5rem;
 }

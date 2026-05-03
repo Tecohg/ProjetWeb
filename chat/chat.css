@@ -1,15 +1,4 @@
 /*chat.css*/
-/*style.css variables */
-:root {
-    --bg: #e4dabe;
-    --text: #141414;
-    --accent: #141414;
-    --muted: #888383;
-    --border: #d7c4c4;
-    --nav-bg: #171616;
-    --nav-text: #ffffff;
-}
- 
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -17,6 +6,7 @@ body {
     font-size: 1rem;
     overflow: hidden; /* desactive le scoll de la page*/
     background-image:none;
+    background-color: var(--bg);
     
 }
 
@@ -28,7 +18,7 @@ h3 {
     text-align: center;
 }
 
-/*navbar*/
+
 .chat-layout {
     display: flex;
     height: calc(100vh - 56px);

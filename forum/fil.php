@@ -56,6 +56,15 @@ $messages = file_exists($msgFile) ? json_decode(file_get_contents($msgFile), tru
             <textarea name="message" placeholder="Votre message..." required></textarea>
             <button type="submit">Envoyer</button>
         </form>
+        <div class="btnSuppr">
+        <?php if ($me === $fil['auteur']): ?>
+            <form method="POST" action="supprimerFil.php">
+                <input type="hidden" name="id" value="<?= htmlspecialchars($id) ?>">
+                <button type="submit" onclick="return confirm('Supprimer ce fil ?')">Supprimer</button>
+            </form>
+        <?php endif; ?>
+        </div>
     </main>
+    
 </body>
 </html>

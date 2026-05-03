@@ -8,7 +8,13 @@
     "W0oooooooh_raph": {
         "j1": "raph",
         "j2": "W0oooooooh",
-        "tableau": "---------",
+        "tableau": "OXX-O----",
         "tour": "raph"
+    },
+    "W0oooooooh_raph2": {
+        "j1": "W0oooooooh",
+        "j2": "raph2",
+        "tableau": "----X----",
+        "tour": "raph2"
     }
 }
