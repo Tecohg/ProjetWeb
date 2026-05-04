@@ -8,6 +8,8 @@ JAVASCRIPT
 PHP
 AJAX
 
+Voici la vidéo de presentation: https://www.youtube.com/watch?v=49tvWtfiYkA
+
 Bien qu'ayant à l'origine prévu un jeu, pour des raisons de temps nous avons fait
 un site sur les chateaux de France et leurs histoires (ou au moins des annecdotes).
 
