@@ -1,23 +1,14 @@
 {
-    "W0oooooooh": [
-        "raph2",
+    "Arnaud": [
         "raph",
-        "Boop",
-        "Pioulf",
-        "Raph"
+        "Fangirl"
     ],
-    "Pioulf": [
-        "W0oooooooh"
-    ],
-    "Boop": [
-        "W0oooooooh"
+    "Fangirl": [
+        "raph",
+        "Arnaud"
     ],
     "raph": [
-        "raph2",
-        "W0oooooooh"
-    ],
-    "raph2": [
-        "raph",
-        "W0oooooooh"
+        "Fangirl",
+        "Arnaud"
     ]
 }

@@ -16,5 +16,23 @@
         "j2": "raph2",
         "tableau": "----X----",
         "tour": "raph2"
+    },
+    "Arnaud_Fangirl": {
+        "j1": "Arnaud",
+        "j2": "Fangirl",
+        "tableau": "OOXXXOXOX",
+        "tour": "Fangirl"
+    },
+    "Arnaud_raph": {
+        "j1": "raph",
+        "j2": "Arnaud",
+        "tableau": "OX-XOX--O",
+        "tour": "raph"
+    },
+    "Fangirl_raph": {
+        "j1": "Fangirl",
+        "j2": "raph",
+        "tableau": "OOXOOXXXX",
+        "tour": "raph"
     }
 }

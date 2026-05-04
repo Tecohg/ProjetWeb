@@ -50,7 +50,7 @@ $login = $_SESSION['login'];
                 <img class="card-img" src="imagesChateaux/versailles.jpg" alt="Versailles">
                 <div class="card-body">
                     <div class="card-label">Chateau de versailles</div>
-                    <div class="card-desc">versailles</div>
+                    <div class="card-desc">versailles, Le château d'or et de lumière.</div>
                 </div>
             </a>
 
@@ -66,7 +66,7 @@ $login = $_SESSION['login'];
                 <img class="card-img" src="imagesChateaux/vestigesDesLascaris.jpg" alt="Château des Lascaris">
                 <div class="card-body">
                     <div class="card-label">Vestiges du château des Lascaris</div>
-                    <div class="card-desc">Une ruine avec</div>
+                    <div class="card-desc">Abandonnée après un tremblement de terre...</div>
                 </div>
             </a>
 
