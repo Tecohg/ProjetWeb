@@ -33,7 +33,9 @@
             Versaille n'a donc été la résidence des rois que pendant à peine plus d'un siècle !<br>
             <br>
             Le château fait plus de 60 000m², pour 2300 pièces ! Aujourd'hui, 1000 sont utilisé pour le musée national des châteaux de Versailles et de Trianon (renseignez vous c'est cool).
-            Et son parc, s'il fait aujourd'hui 93 hectar en faisait à son paroxysme 8000 hectars !
+            Et son parc, s'il fait aujourd'hui 93 hectar en faisait à son paroxysme 8000 hectars !<br>
+            <br>
+            «Mais c'est Versaille ici !»
         </h3>
 
         <h5>Extraits de <a href="https://fr.wikipedia.org/wiki/Ch%C3%A2teau_de_Versailles">wikipedia</a></h5>

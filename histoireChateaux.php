@@ -39,7 +39,7 @@ $login = $_SESSION['login'];
                 <img class="card-img" src="imagesChateaux/versailles.jpg" alt="Versailles">
                 <div class="card-body">
                     <div class="card-label">Chateau de versailles</div>
-                    <div class="card-desc">versailles, Le château d'or et de lumière.</div>
+                    <div class="card-desc">Versailles, le château d'or et de lumière</div>
                 </div>
             </a>
 
@@ -59,17 +59,31 @@ $login = $_SESSION['login'];
                 </div>
             </a>
             
-            <a class="card" href="/page.php">
-                <img class="card-img" src="image.truc" alt="nom du chateau">
+            <a class="card" href="/chateaux/Loches/loches.php">
+                <img class="card-img" src="imagesChateaux/Loches.jpg" alt="Château de Loches">
                 <div class="card-body">
-                    <div class="card-label">chateau</div>
-                    <div class="card-desc">description</div>
+                    <div class="card-label">Chateau de Loches</div>
+                    <div class="card-desc">Une ancienne cité royale</div>
                 </div>
             </a>
+
+            <a class="card" href="/chateaux/Chateau-Gaillard/chateauGaillard.php">
+                <img class="card-img" src="imagesChateaux/Chateau-Gaillard.jpg" alt="Chateau-Gaillard">
+                <div class="card-body">
+                    <div class="card-label">Chateau-Gaillard</div>
+                    <div class="card-desc">Un pas en France des rois anglais</div>
+                </div>
+                
+            <a class="card" href="/chateaux/Cheverny/cheverny.php">
+                <img class="card-img" src="imagesChateaux/ChevernyChateau.jpg" alt="Château de Cheverny">
+                <div class="card-body">
+                    <div class="card-label">Château de Cheverny</div>
+                    <div class="card-desc">Le château ayant inspiré le château de Moulinsart</div>
+                </div>
             
 <!-- modele  
-            <a class="card" href="/page.php">
-                <img class="card-img" src="image.truc" alt="nom du chateau">
+            <a class="card" href="/chateaux/page/page.php">
+                <img class="card-img" src="imagesChateaux/.jpg" alt="nom du chateau">
                 <div class="card-body">
                     <div class="card-label">chateau</div>
                     <div class="card-desc">description</div>

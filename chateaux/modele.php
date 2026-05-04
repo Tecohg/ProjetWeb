@@ -23,14 +23,13 @@ $login = $_SESSION['login'];
      <?php $depth = 2; include '../../nav.php'; ?>
     <main>
         <h1>Titre</h1>
-        <img src="#" alt="chateau">
+        <img src="../../imagesChateaux/.jpg" alt="chateau">
         <h2>accroche</h2>
-        <h3>Histoire</h3>
-        
+        <h3>
+            Histoire
+        </h3>
 
-
-
-        <h5>references<a href="lien site">site</a></h5>
+        <h5>references <a href="lien site">site</a></h5>
         
 </body>
 </html>
