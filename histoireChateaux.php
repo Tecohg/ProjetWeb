@@ -47,10 +47,26 @@ $login = $_SESSION['login'];
 
 
             <a class="card" href="/chateaux/versailles/versailles.php">
-                <img class="card-img" src="https://www.startpage.com/av/proxy-image?piurl=https%3A%2F%2Fcdn.pixabay.com%2Fphoto%2F2014%2F04%2F07%2F07%2F19%2Fversailles-318459_960_720.jpg&sp=1777837029Tb888c0ff0ea17947e344abc9a6b67a26b4a2a7b34a55c1cdc45dda1bf92dda57" alt="Versailles">
+                <img class="card-img" src="imagesChateaux/versailles.jpg" alt="Versailles">
                 <div class="card-body">
                     <div class="card-label">Chateau de versailles</div>
                     <div class="card-desc">versailles</div>
+                </div>
+            </a>
+
+            <a class="card" href="/chateaux/palaisDesPapes/palaisDesPapes.php">
+                <img class="card-img" src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/30/c3/02/6f/place-du-palais-des-papes.jpg?w=1400&h=-1&s=1" alt="Palais Des Papes">
+                <div class="card-body">
+                    <div class="card-label">Palais Des Papes</div>
+                    <div class="card-desc">Le symbole Gothique d'Avignon</div>
+                </div>
+            </a>
+
+            <a class="card" href="/chateaux/vestigesDesLascaris/vestigesDesLascaris.php">
+                <img class="card-img" src="imagesChateaux/vestigesDesLascaris.jpg" alt="Château des Lascaris">
+                <div class="card-body">
+                    <div class="card-label">Vestiges du château des Lascaris</div>
+                    <div class="card-desc">Une ruine avec</div>
                 </div>
             </a>
 
