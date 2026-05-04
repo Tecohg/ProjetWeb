@@ -40,7 +40,7 @@ $login = $_SESSION['login'];
 
 
 
-        <h5>certains extraits pris sur <a href="https://castelnuovo.fr/index.php/nos-activites/la-restauration-des-ruines/l-histoire-du-site-de-castel-nuovo">castelnuovo.fr</a></h5>
+        <h5>Certains extraits pris sur <a href="https://castelnuovo.fr/index.php/nos-activites/la-restauration-des-ruines/l-histoire-du-site-de-castel-nuovo">castelnuovo.fr</a></h5>
         <h5>Images trouvées sur <a href="https://voyages-en-france.fr/index.php/2024/03/24/les-fortifications-de-chateauneuf-villevieille/">voyages-en-france.fr</a></h5>
     </main>
 </body>

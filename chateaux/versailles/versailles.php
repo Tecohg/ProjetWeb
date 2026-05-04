@@ -23,7 +23,7 @@
      <?php $depth = 2; include '../../nav.php'; ?>
     <main>
         <h1>Versaille, un château emblématique.</h1>
-        <img src="https://www.startpage.com/av/proxy-image?piurl=https%3A%2F%2Fcdn.pixabay.com%2Fphoto%2F2014%2F04%2F07%2F07%2F19%2Fversailles-318459_960_720.jpg&sp=1777837029Tb888c0ff0ea17947e344abc9a6b67a26b4a2a7b34a55c1cdc45dda1bf92dda57" alt="Versaille">
+        <img src="../../imagesChateaux/versailles.jpg" alt="Versaille">
         <h2>Versaille, un des plus grands monuments historiques français.</h2>
 
         <h3>
@@ -36,7 +36,7 @@
             Et son parc, s'il fait aujourd'hui 93 hectar en faisait à son paroxysme 8000 hectars !
         </h3>
 
-        <h5>certains extraits pris sur <a href="https://castelnuovo.fr/index.php/nos-activites/la-restauration-des-ruines/l-histoire-du-site-de-castel-nuovo">castelnuovo.fr</a></h5>
+        <h5>Extraits de <a href="https://fr.wikipedia.org/wiki/Ch%C3%A2teau_de_Versailles">wikipedia</a></h5>
         <h5>Images trouvées sur <a href="https://voyages-en-france.fr/index.php/2024/03/24/les-fortifications-de-chateauneuf-villevieille/">voyages-en-france.fr</a></h5>
     </main>
 </body>

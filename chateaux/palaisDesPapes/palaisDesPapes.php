@@ -44,9 +44,6 @@ $login = $_SESSION['login'];
              Pierre Poisson et Jean de Louvres, et des plus grands fresquistes de l'école siennoise, Simone Martini et Matteo Giovanetti.
         </h3>
         
-
-
-
         <h5>Extraits de <a href="https://fr.wikipedia.org/wiki/Palais_des_papes_d%27Avignon">wikipedia</a></h5>
         
 </body>
